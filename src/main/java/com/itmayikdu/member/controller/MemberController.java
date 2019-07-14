@@ -1,7 +1,5 @@
 package com.itmayikdu.member.controller;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
  *
  */
 @RestController
-@EnableAutoConfiguration
 public class MemberController{
 
 //	@RestController表示该类中的所有方法都会返回json格式 等于类的上面是@Controller
@@ -24,9 +21,5 @@ public class MemberController{
 	@RequestMapping("/memberIndex")
 	public String  memberIndex(){
 		return "springboot2.0全新教程";
-	}
-	public static void main(String[] args) {
-		//整个程序入口，启动SpringBoot项目
-		SpringApplication.run(MemberController.class,args);
 	}
 }
